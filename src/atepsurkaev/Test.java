@@ -17,7 +17,9 @@ public class Test {
 
         // Testing the sum - method
         System.out.println("\n--- Testing the sum-method: ---");
-        Number[] numbers = {1.2, 2.43, 3.5, 4, 5.33};
-        System.out.println("Sum of doubleArray: " + GenericUtils.sum(numbers));
+        Double[] doubleArray = {1.2, 2.43, 3.5, 4.3, 5.33};
+        Integer[] integerArray = {1, 2, 3, 4, 5};
+        System.out.println("Sum of doubleArray: " + GenericUtils.sum(doubleArray));
+        System.out.println("Sum of doubleArray: " + GenericUtils.sum(integerArray));
     }
 }
