@@ -25,4 +25,20 @@ public class GenericUtils {
             end--;
         }
     }
+
+    /**
+     * Calculates the sum of elements in the given array, assuming the elements are subclasses
+     * of the java.lang.Number class (including java.lang.Number). Returns the result as a double.
+     * @param array The array containing elements of types extending java.lang.Number.
+     * @param <T>   The generic type of the array elements, extending java.lang.Number.
+     * @return The sum of the elements in the array as a double.
+     */
+    public static <T extends Number> double sum(T[] array) {
+        double sum = 0.0;
+
+        for(int i = 0; i < array.length; i++) {
+            sum += array[i].doubleValue();
+        }
+        return sum;
+    }
 }
