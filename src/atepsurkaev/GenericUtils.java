@@ -7,4 +7,22 @@ package atepsurkaev;
  */
 
 public class GenericUtils {
+
+    /**
+     * Reverses the order of elements in the given array in-place.
+     * @param array The array to be reversed.
+     * @param <T> The generic type of the array elements.
+     */
+    public static <T> void reverse(T[] array) {
+        int start = 0;
+        int end = array.length - 1;
+
+        while (start < end) {
+            T temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+    }
 }
